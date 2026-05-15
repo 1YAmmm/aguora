@@ -1,0 +1,497 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.modal-container {
+  width: 900px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  height: 60px;
+  padding: 0 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  color: #222;
+}
+
+.modal-close-btn {
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  border-radius: 6px;
+}
+
+.modal-close-btn:hover {
+  background: #f3f4f6;
+}
+
+.modal-body {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 16px 20px;
+
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* PRODUCT MODAL */
+
+.product-modal-content {
+  padding: 20px;
+}
+
+.product-search {
+  margin-bottom: 20px;
+}
+
+.product-search input {
+  width: 100%;
+  height: 42px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  padding: 0 14px;
+  outline: none;
+}
+
+.product-search input:focus {
+  border-color: #0f1d4d;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.product-table th {
+  background: #f9fafb;
+  font-size: 14px;
+}
+
+.product-modal-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.cancel-btn {
+  height: 40px;
+  padding: 0 18px;
+
+  border: 1px solid #d1d5db;
+  background: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #f3f4f6;
+}
+
+.add-btn {
+  height: 40px;
+  padding: 0 22px;
+
+  border: none;
+  background: #0f1d4d;
+  color: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+/* DISCOUNT MODAL */
+
+.modal-container {
+  width: 420px;
+  max-width: 95%;
+}
+
+.discount-modal-content {
+  padding: 18px;
+}
+
+.discount-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.discount-form-group label {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.discount-form-group input,
+.discount-form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  padding: 10px 12px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.discount-form-group textarea {
+  resize: none;
+}
+
+.discount-form-group input:focus,
+.discount-form-group textarea:focus {
+  border-color: #0f1d4d;
+}
+
+.discount-modal-footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.discount-cancel-btn {
+  height: 40px;
+  padding: 0 18px;
+
+  border: 1px solid #d1d5db;
+  background: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.discount-cancel-btn:hover {
+  background: #f3f4f6;
+}
+
+.discount-submit-btn {
+  height: 40px;
+  padding: 0 22px;
+
+  border: none;
+  background: #0f1d4d;
+  color: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.discount-submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .modal-container {
+    width: 95%;
+  }
+
+  .discount-modal-content {
+    padding: 14px;
+  }
+
+  .discount-modal-footer {
+    flex-direction: column;
+  }
+
+  .discount-cancel-btn,
+  .discount-submit-btn {
+    width: 100%;
+  }
+}
+/* ========================================= */
+/* PAYMENT MODAL */
+/* ========================================= */
+
+.payment-modal-content {
+  padding: 18px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.payment-method-card {
+  flex: 1;
+  height: 78px;
+
+  border: 1px solid #d1d5db;
+  background: white;
+
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-method-card.active {
+  background: #0f1d4d;
+  color: white;
+  border-color: #0f1d4d;
+}
+
+.payment-method-card span {
+  font-size: 13px;
+}
+
+.payment-icon {
+  font-size: 22px;
+}
+
+.payment-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.payment-form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #222;
+}
+
+.payment-form-group input,
+.payment-form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  padding: 10px 12px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.payment-form-group textarea {
+  resize: none;
+}
+
+.payment-form-group input:focus,
+.payment-form-group textarea:focus {
+  border-color: #0f1d4d;
+}
+
+.payment-modal-footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.payment-cancel-btn {
+  height: 40px;
+  padding: 0 18px;
+
+  border: 1px solid #d1d5db;
+  background: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.payment-submit-btn {
+  height: 40px;
+  padding: 0 22px;
+
+  border: none;
+  background: #0f1d4d;
+  color: white;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-method-card {
+    width: 100%;
+  }
+
+  .payment-modal-footer {
+    flex-direction: column;
+  }
+
+  .payment-cancel-btn,
+  .payment-submit-btn {
+    width: 100%;
+  }
+}
+/* CUSTOMER MODAL */
+
+.customer-modal-content {
+  padding: 18px;
+}
+
+.customer-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.customer-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.customer-form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.customer-form-group input {
+  width: 100%;
+  height: 42px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+
+  padding: 0 12px;
+
+  font-size: 13px;
+  outline: none;
+
+  background: white;
+}
+
+.customer-form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.customer-form-group input:focus {
+  border-color: #0f1d4d;
+}
+
+/* FOOTER */
+
+.customer-modal-footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-cancel-btn {
+  height: 36px;
+  padding: 0 18px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+
+  background: white;
+  color: #222;
+
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.customer-cancel-btn:hover {
+  background: #f3f4f6;
+}
+
+.customer-submit-btn {
+  height: 36px;
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #0f1d4d;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.customer-submit-btn:hover {
+  opacity: 0.95;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .customer-modal-content {
+    padding: 14px;
+  }
+
+  .customer-modal-footer {
+    flex-direction: column;
+  }
+
+  .customer-cancel-btn,
+  .customer-submit-btn {
+    width: 100%;
+  }
+}

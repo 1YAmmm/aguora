@@ -1,0 +1,118 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #1a2b4a;
+  --color-primary-dark: #111d33;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+  --color-partial: #3b82f6;
+  --sidebar-width: 200px;
+  --header-height: 56px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --font-main: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --transition: 0.18s ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-main);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 99px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.badge.paid { color: var(--color-success); }
+.badge.paid .badge-dot { background: var(--color-success); }
+.badge.unpaid { color: var(--color-warning); }
+.badge.unpaid .badge-dot { background: var(--color-warning); }
+.badge.partial { color: var(--color-partial); }
+.badge.partial .badge-dot { background: var(--color-partial); }
+.badge.overdue { color: var(--color-danger); }
+.badge.overdue .badge-dot { background: var(--color-danger); }
+.badge.draft { color: var(--color-text-secondary); }
+.badge.draft .badge-dot { background: var(--color-text-secondary); }
+.badge.cancelled { color: var(--color-danger); }
+.badge.cancelled .badge-dot { background: var(--color-danger); }
+.badge.active { color: var(--color-success); background: #f0fdf4; }
+.badge.active .badge-dot { background: var(--color-success); }
+.badge.inactive { color: var(--color-text-secondary); background: #f3f4f6; }
+.badge.inactive .badge-dot { background: var(--color-text-secondary); }
